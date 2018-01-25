@@ -1,6 +1,11 @@
 # pyofo
 A Python library to interface with ofo bike API.
 
+## Installation
+```
+pip install pyofo
+```
+
 ## Usage
 ### Authentication
 **You should create an ofo account before authentication.**
