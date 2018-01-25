@@ -11,6 +11,7 @@ AUTH = None
 # Token
 TOKEN = None
 
+
 def set_proxies(**new_proxies):
     """Modify PROXIES"""
     global PROXIES

@@ -11,6 +11,13 @@ class LoginHandler(Wrapper):
     """
 
     def __init__(self, tel, ccc, lat, lng):
+        """
+
+        :param tel: phone number intl format
+        :param ccc: Country calling codes (like 33)
+        :param lat: latitude
+        :param lng: Longitude
+        """
         super().__init__(proxies=config.PROXIES, auth=config.AUTH)
         self.tel = tel
         self.ccc = ccc
