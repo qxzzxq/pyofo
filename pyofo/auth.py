@@ -1,32 +1,21 @@
 # coding: utf-8
 
-import requests
-
 from . import config
+from .ofo import Wrapper
 
 
-class LoginHandler:
+class LoginHandler(Wrapper):
     """
     Login is in two step: + Request code with your phone number, you ll receive an sms + Send back this code
     https://github.com/ubahnverleih/WoBike/blob/master/Ofo.md
     """
 
     def __init__(self, tel, ccc, lat, lng):
+        super().__init__(proxies=config.PROXIES, auth=config.AUTH)
         self.tel = tel
         self.ccc = ccc
         self.lat = lat
         self.lng = lng
-        self.header = {
-            'content-type': 'application/x-www-form-urlencoded'
-        }
-        self.proxies = config.proxies
-        self.auth = config.auth
-
-    def complete_url(self, path):
-        return '{base}/{path}'.format(base=config.BASE_URL, path=path)
-
-    def _post(self, url, data):
-        return requests.post(url=url, headers=self.header, data=data, proxies=self.proxies, auth=self.auth)
 
     def request_sms_code(self):
         """
@@ -42,7 +31,6 @@ class LoginHandler:
             'lng': self.lng,
             'lat': self.lat
         }
-        # r = requests.post(url=_url, headers=self.header, data=data, proxies=config.proxies)
         r = self._post(url=_url, data=data)
 
         return r
@@ -64,8 +52,5 @@ class LoginHandler:
             'lat': self.lat
         }
 
-        # r = requests.post(url=_url, headers=self.header, data=data, proxies=config.proxies)
         r = self._post(url=_url, data=data)
         return r
-
-

@@ -5,16 +5,23 @@ from requests.auth import HTTPProxyAuth
 BASE_URL = 'https://one.ofo.com'
 
 # Proxy
-proxies = None
-auth = None
+PROXIES = None  # {'http': 'xxx', ...}
+AUTH = None
 
+# Token
+TOKEN = None
 
 def set_proxies(**new_proxies):
-    """Modify proxies"""
-    global proxies
-    proxies = new_proxies
+    """Modify PROXIES"""
+    global PROXIES
+    PROXIES = new_proxies
 
 
 def set_auth(username, password):
-    global auth
-    auth = HTTPProxyAuth(username, password)
+    global AUTH
+    AUTH = HTTPProxyAuth(username, password)
+
+
+def set_token(new_token):
+    global TOKEN
+    TOKEN = new_token
