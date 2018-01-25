@@ -1,6 +1,7 @@
 # coding: utf-8
 
 import requests
+
 from . import config
 
 
@@ -26,7 +27,7 @@ class Ofo(Wrapper):
         super().__init__(proxies=config.PROXIES, auth=config.AUTH)
         self.token = config.TOKEN
 
-    def near_by_ofo_car(self, lng, lat, token=None):
+    def nearby_ofo_car(self, lng, lat, token=None):
 
         __token = token or self.token
         if not __token:
