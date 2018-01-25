@@ -10,7 +10,7 @@ setup(
     author=__version__.__author__,
     author_email=__version__.__author_email__,
     packages=["pyofo"],
-    license="LICENSE",
+    license="MIT",
     description="A Python library to interface with ofo bike API",
     install_requires=[
         'requests',
