@@ -22,7 +22,7 @@ r.text
 }
 ```
 
-You should receive a sms with a 4-digit OPT code on your mobile phone.
+You will receive a sms with a 4-digit OTP code on your mobile phone.
 
 #### Login and get user token
 ```python
