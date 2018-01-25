@@ -13,6 +13,7 @@ setup(
     packages=['pyofo'],
     license='MIT',
     description='A Python library to interface with ofo bike API',
+    keywords = ['ofo', 'bike'], 
     install_requires=[
         'requests',
     ],
