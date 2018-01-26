@@ -1,5 +1,5 @@
 # pyofo
-A Python library to interface with ofo bike API.
+:bike: A Python library to interface with ofo bike API.
 
 ## Installation
 ```
