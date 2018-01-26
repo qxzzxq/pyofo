@@ -85,6 +85,7 @@ pyofo.set_auth('username', 'password')
 ```
 
 ## Dependency
+- python3
 - requests
 
 For more information, see [this document](https://github.com/ubahnverleih/WoBike/blob/master/Ofo.md).
