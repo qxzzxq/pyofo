@@ -2,7 +2,8 @@
 
 from setuptools import setup
 
-from pyofo import __version__
+import __version__
+
 
 setup(
     name='pyofo',
